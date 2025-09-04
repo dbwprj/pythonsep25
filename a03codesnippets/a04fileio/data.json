@@ -1,0 +1,10 @@
+{
+    "name": "Ramesh",
+    "age": 30,
+    "is_investor": true,
+    "portfolio": [
+        "HDFC",
+        "SUN",
+        "AIR"
+    ]
+}
