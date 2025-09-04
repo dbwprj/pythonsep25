@@ -1,0 +1,33 @@
+run in interactive mode
+
+>>> a = 5
+>>> b = 10
+>>> sum = a + b
+>>> print("The sum is:", sum)
+The sum is: 15
+
+
+>>> def greet(name):
+...     print(f"Hello, {name}!")
+...
+>>> greet("Ramesh")
+Hello, Ramesh!
+
+------------------------------------
+
+create a py file called poc.py
+message = "Hello from the script!"
+def square(x):
+    return x * x
+
+
+run the script in the console by 
+
+python -i example.py
+
+> square(x)
+> print(message)
+
+
+
+
