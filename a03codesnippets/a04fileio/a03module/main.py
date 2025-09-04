@@ -1,5 +1,4 @@
-import a03codesnippets.a04fileio.a03module.csv as csv
-
+from project_csv import read_csv,write_row_to_csv
 FILENAME = "data.csv"
 
 def menu():
@@ -14,13 +13,13 @@ def menu():
         if choice == '1':
             row_input = input("Enter comma separated values for the row: ")
             row = [item.strip() for item in row_input.split(",")]
-            success = csv.write_row_to_csv(FILENAME, row)
+            success = write_row_to_csv(FILENAME, row)
             if success:
                 print("Row added successfully.")
             else:
                 print("Failed to add row to the CSV file.")
         elif choice == '2':
-            success, rows = csv.read_csv(FILENAME)
+            success, rows = read_csv(FILENAME)
             if success:
                 if rows:
                     print("\nCSV Contents:")

@@ -1,0 +1,105 @@
+
+1: Setup & Structure
+
+
+ Create a project folder with this structure:
+
+
+portfolio_manager/
+│
+├── portfolio/              # Python package
+│   ├── models/
+│   ├── logic/
+│   ├── storage/
+│   └── data/
+├── scripts/
+├── tests/
+├── requirements.txt
+└── README.md
+
+
+---
+
+PHASE 2: Models
+
+Task 2: Define the FinancialInstrument class
+
+ Fields: `id`, `name`, `type`, `value`
+ Include a `__str__` or `__repr__` method for easy display
+
+
+PHASE 3: Data Persistence
+
+Task 3: Implement JSON Storage Functions
+
+ `load_data()` — Load instruments from JSON file
+ `save_data()` — Save current state to JSON file
+
+ Store data in: `portfolio/data/portfolio.json`
+
+---
+
+##  PHASE 4: Core Logic
+
+  Task 4: Add Instrument
+
+ Ensure unique ID
+ Validate fields before adding
+ Save to JSON
+
+Task 5: Update Instrument
+
+ Allow updating fields like `name`, `type`, or `value`
+ Handle invalid or missing IDs
+ Save changes
+
+Task 6: Delete Instrument
+
+ Remove instrument by ID
+ Handle non-existent ID
+ Save changes
+
+
+PHASE 5: Portfolio Views & Filters
+
+Task 7: View All Instruments
+
+ Display all instruments with their details
+ Show total value and count
+
+Task 8: Search Instruments by Criteria
+
+ E.g., all stocks, or value > 1000
+ Pass a filter function to generalize search
+
+
+PHASE 6: Interface & Testing
+
+Task 9: CLI Script for Manual Interaction
+
+ In `scripts/run_cli.py`
+ Allow user input to trigger actions: add, view, update, search, delete
+
+Task 10: Unit Testing
+
+ In `tests/`
+ Cover:
+
+   Adding/updating/removing instruments
+   Edge cases (duplicate IDs, invalid data)
+   File storage read/write
+
+
+OPTIONAL PHASE: Stretch Features
+
+Task 11: Export to CSV
+
+ Allow exporting current portfolio to `.csv`
+
+Task 12: Asset Allocation Pie Chart
+
+ Visualize distribution using `matplotlib`
+
+Task 13: Fetch Real Prices via API (e.g., Yahoo Finance)
+
+ Update instrument values dynamically
