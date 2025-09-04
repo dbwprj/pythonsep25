@@ -1,0 +1,54 @@
+1. did i generate the ssh key in linux
+
+/media/enbg/ssd_shankara/python25/pythonsep25/
+
+2. come to the 
+/home/enbg/.ssh/ folder..
+
+3.you will see a .pub file.
+
+4.copy its contents. and go to 
+Go to https://github.com
+Click your profile > Settings
+Go to SSH and GPG keys
+Click New SSH key
+Paste your public key and give it a title
+Click Add SSH key
+
+5. try in your terminal
+ssh -T git@github.com
+
+6. if it did not work come to
+/home/enbg/.ssh/ folder..
+create a config file.
+ensure its contents are.
+
+Host github.com
+Hostname ssh.github.com
+Port 443
+
+7. try the command 
+ssh -T git@github.com
+
+8. it should work... only after it works.
+
+7. you should have a repo in your folder.
+
+8. get the ssh cloning url and not the
+https..
+
+9. git clone git@github.com:dbwprj/pythonsep25.git
+
+10. go to that folder.
+add a file
+commit
+try a push it should work.
+
+until then dont try anything else in git.
+
+
+
+
+
+
+
