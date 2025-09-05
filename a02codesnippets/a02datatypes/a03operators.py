@@ -1,7 +1,7 @@
 # Basic setup
-daily_sales = [250, 0, 400, 600, 300, 0, 800]  # Sales for 7 days
-cost_per_day = 200                             # Fixed daily cost
-target_profit = 1000                           # Weekly profit goal
+daily_sales = [250, 0, 400, 600, 300, 0, 800]  
+cost_per_day = 200                             
+target_profit = 1000                           
 total_profit = 0
 
 # List of item prices

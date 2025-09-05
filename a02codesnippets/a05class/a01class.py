@@ -13,7 +13,7 @@ class Stock:
         return self.price * self.quantity
 
     def display_info(self):
-        """Return stock details as a formatted string."""
+        """observe how multiline grouping is taking place by using ()"""
         info = (
             f"Stock: {self.ticker}\n"
             f"Price per share: ${self.price:.2f}\n"

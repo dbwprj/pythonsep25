@@ -1,0 +1,233 @@
+ 1. Basic Syntax & Data Types
+
+Q: Difference between list, tuple, set, and dictionary?
+
+* List: Ordered, mutable, allows duplicates
+* Tuple: Ordered, immutable, allows duplicates
+* Set: Unordered, mutable, no duplicates
+* Dictionary: Key-value pairs, unordered (Python 3.7+ preserves insertion order)
+
+
+lst = [1, 2, 3]
+tpl = (1, 2, 3)
+st = {1, 2, 3}
+dct = {'a': 1, 'b': 2}
+
+
+---
+
+ 2. Control Structures
+
+Q: How do `break`, `continue`, and `pass` work?
+
+python
+for i in range(5):
+    if i == 3:
+        break   # Exit loop when i == 3
+    if i == 1:
+        continue  # Skip rest of loop body when i == 1
+    pass  # Does nothing, placeholder
+    print(i)
+
+
+Output:
+
+
+0
+2
+
+
+---
+
+ 3. Functions & OOP
+
+ What are \*args and kwargs?
+
+python
+def example(*args, kwargs):
+    print("args:", args)
+    print("kwargs:", kwargs)
+
+example(1, 2, 3, a=4, b=5)
+
+
+Output:
+
+
+args: (1, 2, 3)
+kwargs: {'a': 4, 'b': 5}
+
+
+Q: Instance, class, and static methods
+
+python
+class MyClass:
+    def instance_method(self):
+        return "instance method", self
+
+    @classmethod
+    def class_method(cls):
+        return "class method", cls
+
+    @staticmethod
+    def static_method():
+        return "static method"
+
+obj = MyClass()
+print(obj.instance_method())
+print(MyClass.class_method())
+print(MyClass.static_method())
+
+
+---
+
+ 4. Data Structures & Built-in Functions
+
+Q: List comprehension
+
+python
+squares = [x2 for x in range(5)]
+print(squares)  # [0, 1, 4, 9, 16]
+
+
+Q: map(), filter()
+
+python
+nums = [1, 2, 3, 4, 5]
+
+doubled = list(map(lambda x: x*2, nums))
+evens = list(filter(lambda x: x % 2 == 0, nums))
+
+print(doubled)  # [2, 4, 6, 8, 10]
+print(evens)    # [2, 4]
+
+
+---
+
+ 5. Error Handling
+
+Q: try-except-else-finally
+
+python
+try:
+    x = 1 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+else:
+    print("No exceptions")
+finally:
+    print("Always executed")
+
+
+Output:
+
+
+Cannot divide by zero!
+Always executed
+
+
+---
+
+ 6. Python Internals
+
+Q: Decorator example
+
+python
+def decorator(func):
+    def wrapper():
+        print("Before function call")
+        func()
+        print("After function call")
+    return wrapper
+
+@decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+
+
+---
+
+ 7. File Handling
+
+Q: Reading a file
+
+python
+with open("file.txt", "r") as f:
+    content = f.read()
+    print(content)
+
+
+---
+
+ 8. Modules & Packages
+
+Q: Import a module
+
+python
+import math
+print(math.sqrt(16))  # 4.0
+
+
+---
+
+
+Q: Lambda function
+
+python
+add = lambda x, y: x + y
+print(add(2, 3))  # 5
+
+
+Q: List slicing
+
+python
+lst = [0,1,2,3,4,5]
+print(lst[1:4])  # [1, 2, 3]
+print(lst[::-1]) # [5, 4, 3, 2, 1, 0] (reverse)
+
+
+
+-------------------------------------------------
+
+
+for i in range(5):
+    print(i)
+
+
+While loop example:
+
+python
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+
+
+Both will output:
+
+0
+1
+2
+3
+4
+
+The for loop** iterates over a fixed sequence (`range(5)`),
+the while loop** keeps running until the condition (`i < 5`) becomes false.
+
+import copy
+
+original = [1, 2, [3, 4]]
+
+
+shallow = copy.copy(original)
+shallow[2][0] = 'Changed'
+print("Original:", original)
+print("Shallow Copy:", shallow)
+
+
+deep = copy.deepcopy(original)
+deep[2][0] = 'DeepChanged'
+print("Original:", original)
+print("Deep Copy:", deep)

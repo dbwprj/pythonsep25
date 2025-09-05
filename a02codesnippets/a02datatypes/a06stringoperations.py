@@ -31,3 +31,18 @@ print("Number of times 'and' appears:", clean_feedback.count("and"))
 #  find() – Find position of a word
 position = clean_feedback.find("packaging")
 print("Position of 'packaging':", position)
+
+
+name = "Harish"
+age = 30
+city = "Bangalore"
+
+info = (
+    f"Name: {name}\n"
+    f"Age: {age}\n"
+    f"City: {city}\n"
+    
+)
+
+print(info)
+

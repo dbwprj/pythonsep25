@@ -37,3 +37,16 @@ def calculator():
 
 # Call the calculator function
 calculator()
+
+
+
+def calculate_rectangle(length, breadth):
+    area = length * breadth
+    perimeter = 2 * (length + breadth)
+    return area, perimeter
+
+
+
+a, p = calculate_rectangle(10, 5) # returning a tuple and unpacked.
+print("Area:", a)        
+print("Perimeter:", p)  
