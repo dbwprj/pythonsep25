@@ -1,6 +1,6 @@
 
 # Import the custom module
-import math as mymath
+import ca as mymath
 
 # Use the functions from the module
 x = 10
